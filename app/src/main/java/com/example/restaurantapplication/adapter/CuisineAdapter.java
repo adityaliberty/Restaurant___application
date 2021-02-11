@@ -13,17 +13,18 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.restaurantapplication.R;
 import com.example.restaurantapplication.model.Cuisine;
 
+import java.util.ArrayList;
 import java.util.List;
 
 
 public class CuisineAdapter extends RecyclerView.Adapter<CuisineAdapter.CuisineViewHolder > {
 
     Context context;
-    List<Cuisine> cuisineList;
+    List<Cuisine> cuisineList=new ArrayList<>();
 
     public CuisineAdapter(Context context, List<Cuisine> cuisineList) {
         this.context = context;
-        cuisineList = cuisineList;
+        this.cuisineList = cuisineList;
     }
 
     @NonNull
