@@ -20,14 +20,16 @@
             android:layout_width="229.5dp"
             android:layout_height="153dp"
             android:adjustViewBounds="true"
+            android:onClick="openNorthindian"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+
             app:srcCompat="@drawable/northindian" />
 
         <TextView
-            android:id="@+id/name"
+            android:id="@+id/northname"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"

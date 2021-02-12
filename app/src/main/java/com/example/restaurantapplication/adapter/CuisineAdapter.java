@@ -1,6 +1,7 @@
 package com.example.restaurantapplication.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +11,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.restaurantapplication.NorthIndian;
 import com.example.restaurantapplication.R;
 import com.example.restaurantapplication.model.Cuisine;
 
@@ -38,6 +40,8 @@ public class CuisineAdapter extends RecyclerView.Adapter<CuisineAdapter.CuisineV
     public void onBindViewHolder(@NonNull CuisineViewHolder holder, int position) {
         holder.foodImage.setImageResource(cuisineList.get(position).getImageUrl());
         holder.name.setText(cuisineList.get(position).getName());
+
+
     }
 
     @Override
@@ -53,7 +57,7 @@ public class CuisineAdapter extends RecyclerView.Adapter<CuisineAdapter.CuisineV
          public CuisineViewHolder(@NonNull View itemView) {
             super(itemView);
             foodImage=itemView.findViewById(R.id.food_image);
-            name=itemView.findViewById(R.id.name);
+            name=itemView.findViewById(R.id.northname);
         }
     }
 }

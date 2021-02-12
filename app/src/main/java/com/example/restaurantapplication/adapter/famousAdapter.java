@@ -55,7 +55,7 @@ public class famousAdapter extends RecyclerView.Adapter<famousAdapter.famousView
         public famousViewHolder(@NonNull View itemView) {
             super(itemView);
             foodImage=itemView.findViewById(R.id.food_image);
-            name=itemView.findViewById(R.id.name);
+            name=itemView.findViewById(R.id.northname);
             price=itemView.findViewById(R.id.price);
             rating=itemView.findViewById(R.id.rating);
 

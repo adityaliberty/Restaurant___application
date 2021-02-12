@@ -4,9 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import com.example.restaurantapplication.adapter.CuisineAdapter;
+import com.example.restaurantapplication.adapter.NorthAdapter;
 import com.example.restaurantapplication.adapter.famousAdapter;
 import com.example.restaurantapplication.model.Cuisine;
 import com.example.restaurantapplication.model.famous;
@@ -15,8 +18,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
-RecyclerView cuisineRecycler,FamousRecycler;
+RecyclerView cuisineRecycler,FamousRecycler,northRecycler;
 famousAdapter FamousAdapter;
+NorthAdapter northAdapter;
 CuisineAdapter cuisineAdapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,9 +35,9 @@ CuisineAdapter cuisineAdapter;
         cuisineList.add(new Cuisine("Italian",R.drawable.italian));
         setCuisineRecycler(cuisineList);
         List<famous> famousList =new ArrayList<>();
-        famousList.add(new famous("Chole Bhature",R.drawable.cb,"3.08","4.8" ));
-        famousList.add(new famous("Italian Pizza",R.drawable.pizza, "5.05","4.7"));
-        famousList.add(new famous("Paav Bhaaji",R.drawable.pb,"4.06","4.9"));
+        famousList.add(new famous("Chole Bhature",R.drawable.cb,"150rs.","4.8" ));
+        famousList.add(new famous("Italian Pizza",R.drawable.pizza, "300rs.","4.7"));
+        famousList.add(new famous("Paav Bhaaji",R.drawable.pb,"110rs.","4.5"));
         setFamousRecycler(famousList);
 
     }
@@ -50,5 +54,9 @@ CuisineAdapter cuisineAdapter;
         FamousRecycler.setLayoutManager(layoutManager);
         FamousAdapter =new famousAdapter(this,famousList);
         FamousRecycler.setAdapter(FamousAdapter);
+    }
+
+    public void openNorthindian(View view) {
+        startActivity(new Intent(this,NorthIndian.class));
     }
 }
