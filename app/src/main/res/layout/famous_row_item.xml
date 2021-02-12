@@ -5,25 +5,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginTop="16dp"
+    android:layout_marginTop="5dp"
     android:layout_marginStart="8dp"
     android:layout_marginEnd="8dp"
     android:elevation="15dp"
 
 
-    app:cardCornerRadius="20dp">
+    app:cardCornerRadius="25dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_width="match_parent"
+        android:layout_height="113dp">
 
         <ImageView
             android:id="@+id/food_image"
             android:layout_width="148dp"
             android:layout_height="101dp"
+            android:layout_marginTop="4dp"
             android:adjustViewBounds="true"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="0.048"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/cb" />
@@ -41,19 +42,39 @@
             app:layout_constraintStart_toEndOf="@+id/food_image"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <!--        <TextView-->
+        <!--            android:id="@+id/price"-->
+        <!--            android:layout_width="76dp"-->
+        <!--            android:layout_height="42dp"-->
+        <!--            android:layout_marginTop="40dp"-->
+        <!--            android:fontFamily="@font/semibold"-->
+        <!--            android:text="Price: $3.08"-->
+        <!--            android:textColor="#DC0C0C"-->
+        <!--            android:textSize="16sp"-->
+        <!--            app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--            app:layout_constraintEnd_toEndOf="parent"-->
+        <!--            app:layout_constraintHorizontal_bias="0.866"-->
+        <!--            app:layout_constraintStart_toEndOf="@+id/name"-->
+        <!--            app:layout_constraintTop_toTopOf="@+id/name"-->
+        <!--            app:layout_constraintVertical_bias="0.0"-->
+        <!--            tools:ignore="MissingConstraints" />-->
+
         <TextView
             android:id="@+id/price"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
+            android:layout_width="123dp"
+            android:layout_height="81dp"
             android:fontFamily="@font/semibold"
-            android:text="$3.08"
+            android:gravity="center"
+            android:text="Price: $3.08"
             android:textColor="#DC0C0C"
             android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/rating"
             app:layout_constraintTop_toTopOf="@+id/name"
-            app:layout_constraintVertical_bias="0.043"
-            tools:layout_editor_absoluteX="349dp" />
+            app:layout_constraintVertical_bias="1.0"
+            tools:ignore="MissingConstraints" />
 
         <TextView
             android:id="@+id/rating"
